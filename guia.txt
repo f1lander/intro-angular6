@@ -1,0 +1,31 @@
+Guia tutoria angular 6
+
+1. Arquitectura
+
+https://docs.google.com/presentation/d/1JfVyHQRojcD0LbOgCGS1Kn1vRz8Sn89VxruBot4jJJ0/edit#slide=id.g2b7513bd67_0_22
+
+
+install angular material and flex
+
+    npm install --save @angular/material @angular/cdk @angular/animations
+
+    npm install @angular/flex-layout@latest --save
+
+
+Basics
+
+    # - variable declaration
+
+    () - event binding
+
+    [] - property binding
+
+    [()] - two-way property binding
+
+    {{ }} - interpolation
+
+
+
+
+
+
