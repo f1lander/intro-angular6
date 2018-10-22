@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MongoStitchService } from 'src/app/mongo-stitch.service';
 
 @Component({
   selector: 'app-home',
@@ -8,20 +9,25 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   title: string;
-  ingredient: string;
-  ingredients: any;
-  constructor() {
-    this.title = 'Ingredientes';
+  codingCategory: string;
+  codingCategories: any;
 
-    this.ingredients = [];
+  constructor(private _mongoStitchService: MongoStitchService) {
+
+    this.title = 'Categorias de Lenguajes';
+    this.codingCategories = [];
   }
 
   ngOnInit() {
-
+    this._mongoStitchService.find('codingcategories')
+      .then(docs => {
+        console.log('codingcategories', docs);
+      });
   }
 
   addIngredient() {
-    this.ingredients.push(this.ingredient);
+    this.codingCategories.push(this.codingCategory);
+
   }
 
 }
