@@ -4,21 +4,17 @@
 
 <form class="example-form">
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Favorite food" [(ngModel)]="inputA" [ngModelOptions]="{standalone: true}">
+    <input matInput placeholder="Ingrediente" [(ngModel)]="ingredient" [ngModelOptions]="{standalone: true}">
   </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Favorite food" [(ngModel)]="inputB" [ngModelOptions]="{standalone: true}">
-  </mat-form-field>
+  <button (click)="addIngredient()" mat-button>Agregar</button>
   
 </form>
 
-<p>
-  {{ inputA }}
-</p>
+<mat-list>
+  <mat-list-item *ngFor="let item of ingredients" > {{ item }} </mat-list-item>
 
-<p>
-  {{ inputB }}
-</p>
+ </mat-list>
+
 
 

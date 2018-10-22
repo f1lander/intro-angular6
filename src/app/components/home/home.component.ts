@@ -8,13 +8,20 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   title: string;
-  inputA: string;
-  inputB: string;
+  ingredient: string;
+  ingredients: any;
   constructor() {
-    this.title = 'Home Works!!';
+    this.title = 'Ingredientes';
+
+    this.ingredients = [];
   }
 
   ngOnInit() {
+
+  }
+
+  addIngredient() {
+    this.ingredients.push(this.ingredient);
   }
 
 }
