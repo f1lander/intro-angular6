@@ -8,7 +8,7 @@ import { Home2Component } from './components/home2/home2.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavVarComponent } from './nav-var/nav-var.component';
 import { LayoutModule } from '@angular/cdk/layout';
-
+import { HttpClientModule } from '@angular/common/http';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatInputModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
@@ -30,7 +30,8 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatListModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
