@@ -12,8 +12,11 @@ export class HomeComponent implements OnInit {
   ingredient: string;
   ingredients: any;
   users: any;
+  _getData;
   constructor(private restApi: RestApiServiceService) {
     this.title = 'Ingredientes';
+
+    this._getData = this.restApi.getData().subscribe();
 
     this.ingredients = [];
     this.users = [];
@@ -21,11 +24,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.restApi.getData()
-      .then((results: any) => {
+      .subscribe((results: any) => {
         this.users = results.data;
-      })
-      .catch(err => console.log('Error', err));
-
+      }, (err) => console.log(err));
+      // .catch(err => console.log('Error', err));
   }
 
   addIngredient() {

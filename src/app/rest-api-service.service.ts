@@ -14,6 +14,6 @@ export class RestApiServiceService {
   }
 
   getData() {
-    return this._http.get(`${this.baseURL}/api/users?page=2`).toPromise();
+    return this._http.get(`${this.baseURL}/api/users?page=2`);
   }
 }
