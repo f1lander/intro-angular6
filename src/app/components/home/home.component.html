@@ -1,20 +1,18 @@
 <h1>
-  {{ title }}
+  Tiendita los 3 Hermanos
 </h1>
 
 <form class="example-form">
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Ingrediente" [(ngModel)]="ingredient" [ngModelOptions]="{standalone: true}">
+    <input matInput placeholder="Busca un producto" [(ngModel)]="product" [ngModelOptions]="{standalone: true}">
   </mat-form-field>
 
-  <button (click)="addIngredient()" mat-button>Agregar</button>
-  
+  <button (click)="search()" mat-button>Buscar</button>
+
 </form>
 
-<mat-list>
-  <mat-list-item *ngFor="let item of users" > {{ item.first_name + ' ' + item.last_name }} </mat-list-item>
-
- </mat-list>
-
-
-
+<mat-list class="card-container">
+  <mat-list-item class="card-x" *ngFor="let item of users$ | async">
+    <mat-card>{{ item.first_name + ' ' + item.last_name }} </mat-card>
+  </mat-list-item>
+</mat-list>

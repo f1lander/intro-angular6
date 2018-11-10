@@ -9,7 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavVarComponent } from './nav-var/nav-var.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { HttpClientModule } from '@angular/common/http';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatInputModule } from '@angular/material';
+// tslint:disable-next-line:max-line-length
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatCardModule, MatIconModule, MatListModule, MatInputModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -27,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
+    MatCardModule,
     MatIconModule,
     MatListModule,
     MatInputModule,

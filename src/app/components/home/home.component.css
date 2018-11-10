@@ -2,8 +2,21 @@
     min-width: 150px;
     max-width: 500px;
     width: 100%;
+    flex-direction: row;
+    display: flex;
   }
   
   .example-full-width {
     width: 100%;
   }
+
+
+.card-container {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-x {
+  padding: 10px;
+}
